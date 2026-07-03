@@ -27,19 +27,19 @@ public class AlumnosServiceImpl implements AlumnosService {
 		try {
 			List<AlumnosDto> alumnos = alumnosRepository.getAlumnos();
 			
-			if(alumnos != null && !alumnos.isEmpty()) {
-				response.setCode(1);
-				response.setMessage("Registros de alumnos obtenidos");
-				response.setContent(alumnos);
-			}
-			else {
-				response.setCode(-1);
-				response.setMessage("No se obtuvieron alumnos");
-			}
+			// if(alumnos != null && !alumnos.isEmpty()) {
+			// 	response.setCode(1);
+			// 	response.setMessage("Registros de alumnos obtenidos");
+			// 	response.setContent(alumnos);
+			// }
+			// else {
+			// 	response.setCode(-1);
+			// 	response.setMessage("No se obtuvieron alumnos");
+			// }
 		}
 		catch (NullPointerException nullPointerException) {
 			response.setCode(-10);
-			response.setMessage("Algún dato viene nulo");
+			response.setMessage("Algï¿½n dato viene nulo");
 		}
 		catch (Exception exception) {
 			response.setCode(-100);
@@ -69,7 +69,7 @@ public class AlumnosServiceImpl implements AlumnosService {
 		}
 		catch (NullPointerException nullPointerException) {
 			response.setCode(-10);
-			response.setMessage("Algún dato viene nulo");
+			response.setMessage("Algï¿½n dato viene nulo");
 		}
 		catch (Exception exception) {
 			response.setCode(-100);
@@ -92,7 +92,7 @@ public class AlumnosServiceImpl implements AlumnosService {
 	        
 	        if(insertResponse ==1 ) {
 	        	response.setCode(1);
-	        	response.setMessage("Se insertó correctamente");
+	        	response.setMessage("Se insertï¿½ correctamente");
 	        }
 		}
 		catch (NullPointerException nullPointerException) {
@@ -119,7 +119,7 @@ public class AlumnosServiceImpl implements AlumnosService {
 	        
 	        if(updateResponse ==1 ) {
 	        	response.setCode(1);
-	        	response.setMessage("Se actualizó correctamente");
+	        	response.setMessage("Se actualizï¿½ correctamente");
 	        }
 		}
 		catch (NullPointerException nullPointerException) {
@@ -150,7 +150,7 @@ public class AlumnosServiceImpl implements AlumnosService {
 	        	alumnos = new AlumnosDto(1L, "as");
 	        	
 	        	response.setCode(1);
-	        	response.setMessage("Se eliminó correctamente");
+	        	response.setMessage("Se eliminï¿½ correctamente");
 	        }
 		}
 		catch (NullPointerException nullPointerException) {
